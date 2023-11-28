@@ -29,95 +29,10 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="御坂小栈" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">首页</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-11-27T07:50:49.000Z" title="2023/11/27 15:50:49">2023-11-27</time>发表</span><span class="level-item"><time dateTime="2023-11-28T01:40:26.540Z" title="2023/11/28 09:40:26">2023-11-28</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Hexo/">Hexo</a><span> / </span><a class="link-muted" href="/categories/GitHub/">GitHub</a></span><span class="level-item">2 分钟读完 (大约324个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/11/27/%E5%AE%89%E8%A3%85hexo7.0.0%E5%B9%B6%E9%83%A8%E7%BD%B2%E5%A4%87%E4%BB%BDGitHub/">安装Hexo7.0.0并部署备份至GitHub</a></p><div class="content"><blockquote>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="御坂小栈" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">首页</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-11-27T07:50:49.000Z" title="2023/11/27 15:50:49">2023-11-27</time>发表</span><span class="level-item"><time dateTime="2023-11-28T01:43:40.089Z" title="2023/11/28 09:43:40">2023-11-28</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Hexo/">Hexo</a><span> / </span><a class="link-muted" href="/categories/GitHub/">GitHub</a></span><span class="level-item">2 分钟读完 (大约325个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/11/27/%E5%AE%89%E8%A3%85hexo7.0.0%E5%B9%B6%E9%83%A8%E7%BD%B2%E5%A4%87%E4%BB%BDGitHub/">安装Hexo7.0.0并部署备份至GitHub</a></p><div class="content"><blockquote>
 <p>开始之前请先安装好Node.js</p>
 </blockquote>
-<h2 id="第一步初始化Hexo"><a href="#第一步初始化Hexo" class="headerlink" title="第一步初始化Hexo"></a>第一步初始化Hexo</h2><h3 id="1-执行NPM命令安装Hexo"><a href="#1-执行NPM命令安装Hexo" class="headerlink" title="1.执行NPM命令安装Hexo"></a>1.执行NPM命令安装Hexo</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-建站Hexo"><a href="#2-建站Hexo" class="headerlink" title="2.建站Hexo"></a>2.建站Hexo</h3><ol>
-<li>初始化Hexo</li>
-</ol>
-<blockquote>
-<p> hexo init &lt;文件夹&gt; 文件夹可以不需要创建命令会自动创建好，文件夹名称可自定义</p>
-</blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>Hexo常用语句</li>
-</ol>
-<p>部署博客以及启动博客需要先生成博客文件，具体命令使用方法请看Hexo官方文档</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>hexo clean</td>
-<td>清理静态文件</td>
-</tr>
-<tr>
-<td>hexo config</td>
-<td>配置文件</td>
-</tr>
-<tr>
-<td>hexo deploy</td>
-<td>部署博客</td>
-</tr>
-<tr>
-<td>hexo server</td>
-<td>启动服务</td>
-</tr>
-<tr>
-<td>hexo generate</td>
-<td>生成静态文件</td>
-</tr>
-</tbody></table>
-<ol start="3">
-<li>启动博客<blockquote>
-<p>默认端口4000</p>
-</blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h2 id="部署备份Hexo"><a href="#部署备份Hexo" class="headerlink" title="部署备份Hexo"></a>部署备份Hexo</h2><blockquote>
-<p>开始前请先在github上创建好github pages仓库</p>
-</blockquote>
-<h3 id="1-部署Hexo"><a href="#1-部署Hexo" class="headerlink" title="1.部署Hexo"></a>1.部署Hexo</h3><ol>
-<li>配置Hexo配置文件</li>
-</ol>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&#x27;项目地址&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>将博客文件提交至github仓库中</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-备份Hexo博客源文件"><a href="#2-备份Hexo博客源文件" class="headerlink" title="2.备份Hexo博客源文件"></a>2.备份Hexo博客源文件</h3><blockquote>
-<p>注意.gitignore中需要将node_modules放开</p>
-</blockquote>
-<ol>
-<li>初始化git</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>指定仓库</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:yourName/repositoryname.git</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>切换分支</li>
-</ol>
-<blockquote>
-<p>如果想要隐藏博客源文件可创建一个私有项目直接克隆，跳过此步骤</p>
-</blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b backup</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>提交源文件至分支</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;backup&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-11-24T08:14:49.000Z" title="2022/11/24 16:14:49">2022-11-24</time>发表</span><span class="level-item"><time dateTime="2023-11-27T06:34:43.906Z" title="2023/11/27 14:34:43">2023-11-27</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Java/">Java</a></span><span class="level-item">13 分钟读完 (大约1881个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/11/24/Java%E5%AE%9E%E7%8E%B0%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8FAPIV3%20%E6%94%AF%E4%BB%98%E5%8A%9F%E8%83%BD/">Java实现微信小程序APIV3 支付功能</a></p><div class="content"><blockquote>
+<h2 id="第一步初始化Hexo"><a href="#第一步初始化Hexo" class="headerlink" title="第一步初始化Hexo"></a>第一步初始化Hexo</h2><h3 id="1-执行NPM命令安装Hexo"><a href="#1-执行NPM命令安装Hexo" class="headerlink" title="1.执行NPM命令安装Hexo"></a>1.执行NPM命令安装Hexo</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure></div><a class="article-more button is-small is-size-7" href="/2023/11/27/%E5%AE%89%E8%A3%85hexo7.0.0%E5%B9%B6%E9%83%A8%E7%BD%B2%E5%A4%87%E4%BB%BDGitHub/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-11-24T08:14:49.000Z" title="2022/11/24 16:14:49">2022-11-24</time>发表</span><span class="level-item"><time dateTime="2023-11-27T06:34:43.906Z" title="2023/11/27 14:34:43">2023-11-27</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Java/">Java</a></span><span class="level-item">13 分钟读完 (大约1881个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/11/24/Java%E5%AE%9E%E7%8E%B0%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8FAPIV3%20%E6%94%AF%E4%BB%98%E5%8A%9F%E8%83%BD/">Java实现微信小程序APIV3 支付功能</a></p><div class="content"><blockquote>
 <p>前言：本篇文章属于Java后端代码实现，并没有前端代码  </p>
 </blockquote>
 <ol>
