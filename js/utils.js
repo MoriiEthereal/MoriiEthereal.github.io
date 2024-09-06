@@ -1283,7 +1283,7 @@ const anzhiyu = {
   categoriesBarActive: function () {
     const urlinfo = decodeURIComponent(window.location.pathname);
     const $categoryBar = document.getElementById("category-bar");
-    $categoryBar.style.display = "none";
+    if($categoryBar) $categoryBar.style.display = "none";
     if (!$categoryBar) return;
 
     if (urlinfo === "/") {
